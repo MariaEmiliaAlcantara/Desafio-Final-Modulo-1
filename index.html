@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>Números da Covid</title>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.2.0/chart.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="./assets/css/keen-dashboards.css" />
+
+</head>
+
+<body class="keen-dashboard">
+  <div class="container">
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="navbar-collapse">
+        <ul class="navbar-nav nav main-nav">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../country.html">País</a></li>
+          <li><a href="#">Top 5</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="container grid grid-two-and-one">
+    <div class="chart-wrapper">
+      <div class="containerkpi wrapkpi">
+        <section class="itemkpi">
+          <h5>Total Confirmados</h5>
+          <p id="confirmed"></p>
+        </section>
+        <section class="itemkpi">
+          <h5>Total Mortes</h5>
+          <p id="death"></p>
+        </section>
+        <section class="itemkpi">
+          <h5>Total Recuperados</h5>
+          <p id="recovered"></p>
+        </section>
+      </div>
+      <div class="chart-notes" id="date">Data de atualização: <span id="dateSpan"></span></div>
+    </div>
+    <div class="chart-wrapper">
+      <div class="chart-stage">
+        <canvas id="pizza" width="100" height="50"></canvas>
+        <!--Adicionar grafico-->
+      </div>
+    </div>
+    <div class="two">
+      <div class="chart-wrapper">
+        <div class="chart-stage">
+          <!--Adicionar grafico-->
+          <canvas id="barras" width="300" height="100"></canvas>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="./assets/js/app.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="path/to/chartjs/dist/chart.js"></script>
+
+</body>
+
+</html>
