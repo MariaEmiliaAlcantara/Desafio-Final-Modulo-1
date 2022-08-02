@@ -84,6 +84,7 @@ async function insertInHtmlCountry(country, dateStart, dateEnd, dataType) {
   const dataCountryDaily = await getDataCountryDaily(country);
   let arrayDate = [];
   let arrayData = [];
+
   if (!dateStart) {
     dateStart = 0;
   } else {
@@ -94,20 +95,27 @@ async function insertInHtmlCountry(country, dateStart, dateEnd, dataType) {
   } else {
     dateEnd = new Date(dateEnd).getTime();
   }
+
   for (let i = 0; i < dataCountryDaily.length; i++) {
     if (i === 0) {
       continue;
     }
     let dateAPI = dataCountryDaily[i].Date;
     let timeStamp = new Date(dateAPI).getTime();
-    let cases =
-      dataCountryDaily[i][dataType] - dataCountryDaily[i - 1][dataType];
 
     if (timeStamp >= dateStart && timeStamp <= dateEnd) {
+      let cases =
+        dataCountryDaily[i][dataType] - dataCountryDaily[i - 1][dataType];
+      if (cases < 0) {
+        cases = 0;
+      }
       arrayDate.push(dateAPI.slice(0, 10));
       arrayData.push(cases);
     }
   }
+  const sum = arrayData.reduce((partialSum, a) => partialSum + a, 0);
+  const average = Math.round(sum / arrayData.length);
+  const arrayAverage = new Array(arrayData.length).fill(average);
 
   let config = {
     type: "line",
@@ -117,9 +125,16 @@ async function insertInHtmlCountry(country, dateStart, dateEnd, dataType) {
         {
           label: dataType,
           data: [...arrayData],
-          backgroundColor: ["rgba(255, 99, 132, 0.2)"],
-          borderColor: ["rgba(255, 99, 132, 1)"],
+          backgroundColor: ["#BF7034"],
+          borderColor: ["#BF7034"],
           borderWidth: 1,
+        },
+        {
+          label: "Média",
+          data: [...arrayAverage],
+          backgroundColor: ["#a4262c"],
+          borderColor: ["#a4262c"],
+          borderWidth: 0.5,
         },
       ],
     },

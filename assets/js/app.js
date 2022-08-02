@@ -44,25 +44,18 @@ async function insertInHtml() {
         {
           label: "Distribuição de novos casos",
           data: [globalNewConfirmed, globalNewRecovered, globalNewDeaths],
-          backgroundColor: [
-            "rgba(237, 165, 62, 0.8)",
-            "rgba(0, 171, 128, 0.8)",
-            "rgba(172, 20, 30, 0.8)",
-          ],
-          borderColor: [
-            "rgba(237, 165, 62, 1)",
-            "rgba(0, 171, 128, 1)",
-            "rgba(172, 20, 30, 1)",
-          ],
+          backgroundColor: ["#BF7034", "#407855", "#a4262c"],
+          borderColor: ["#BF7034", "#407855", "#a4262c"],
           borderWidth: 1,
         },
       ],
     },
     options: {
       responsive: true,
+      maintainAspectRatio: false,
       plugins: {
         legend: {
-          position: "top",
+          display: false,
         },
         title: {
           display: true,
@@ -94,7 +87,7 @@ async function insertInHtml() {
         {
           label: "Total de mortes",
           data: firstTenCasesDeaths,
-          backgroundColor: ["rgba(255, 99, 132, 0.8)"],
+          backgroundColor: ["#40587c"],
         },
       ],
     },
@@ -105,6 +98,7 @@ async function insertInHtml() {
         },
       },
       responsive: true,
+      maintainAspectRatio: false,
       plugins: {
         legend: {
           display: false,

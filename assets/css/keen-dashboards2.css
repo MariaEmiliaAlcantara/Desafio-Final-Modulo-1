@@ -84,8 +84,8 @@ hr {
 h1,
 h2,
 h3 {
-  margin-top: 20px;
-  margin-bottom: 10px;
+  padding: 7px 10px 4px;
+  margin-top: 10px;
 }
 
 h4,
@@ -103,7 +103,8 @@ h2 {
 }
 
 h3 {
-  font-size: 24px;
+  font-size: 20px;
+  color: #506175;
 }
 
 h4 {
@@ -137,10 +138,8 @@ small,
 }
 
 .container {
-  padding-left: 15px;
+  padding-left: 25px;
   padding-right: 15px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 @media (min-width: 1200px) {
@@ -737,23 +736,52 @@ button {
   border: 1px solid #e2e2e2;
   border-radius: 15px;
   margin-bottom: 10px;
-  height: 40vh;
+  height: 60vh;
+}
+
+.keen-dashboard .chart-wrapper2 {
+  background: #fff;
+  border: 1px solid #e2e2e2;
+  border-radius: 15px;
+  margin-bottom: 10px;
+  height: 82vh;
+  padding: 1vw;
+}
+
+.keen-dashboard .chart-wrapper3 {
+  background: #fff;
+  border: 1px solid #e2e2e2;
+  border-radius: 15px;
+  margin-bottom: 10px;
+  height: 20vh;
+  padding: 1vw;
 }
 
 
-.keen-dashboard .chart-wrapper .chart-title {
+.keen-dashboard .chart-wrapper2 .chart-title {
   border-bottom: 1px solid #d7d7d7;
   color: #666;
-  font-size: 14px;
-  font-weight: 200;
+  font-size: 16px;
+  font-weight: bold;
   padding: 7px 10px 4px;
-  
+}
+
+.keen-dashboard .chart-wrapper3 .chart-title {
+  color: #666;
+  font-size: 14px;
+  font-weight: bold;
 }
 
 .keen-dashboard .chart-wrapper .chart-stage {
   overflow: hidden;
   padding: 5px 10px;
   position: relative;
+}
+
+.keen-dashboard .chart-wrapper .chart-stage2 {
+  overflow: hidden;
+  padding: 20px;
+    position: relative;
 }
 
 .keen-dashboard .chart-wrapper .chart-notes {
@@ -787,4 +815,26 @@ button {
   .keen-dashboard .chart-wrapper {
     margin-bottom: 0;
   }
+}
+
+input, select {
+  border-radius: 10px;
+  outline: none;
+  border: 1px solid grey;
+  padding: 5px;
+  margin-left: 10px;
+  color: #68a797;
+  font-size: 16px;
+  width: 18vw;
+}
+
+button {
+  border-radius: 10px;
+    outline: none;
+    border: 1px solid grey;
+    padding: 5px;
+    color: #68a797;
+    font-size: 16px;
+    width: 18vw;
+    margin-top: 5vh;
 }

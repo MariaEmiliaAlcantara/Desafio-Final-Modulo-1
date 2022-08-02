@@ -13,7 +13,7 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
 
-  <link rel="stylesheet" type="text/css" href="./assets/css/keen-dashboards.css" />
+  <link rel="stylesheet" type="text/css" href="./assets/css/keen-dashboards2.css" />
 </head>
 
 <body class="keen-dashboard">
@@ -21,9 +21,9 @@
     <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="navbar-collapse">
         <ul class="navbar-nav nav main-nav">
-          <li><a href="../index.html">Home</a></li>
-          <li><a href="../country.html">País</a></li>
-          <li><a href="#">Top 5</a></li>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./country.html">País</a></li>
+          <!--<li><a href="#">Top 5</a></li>-->
         </ul>
       </div>
     </div>
@@ -31,25 +31,25 @@
 
   <div class="container grid grid-hero-sidebar">
     <div class="sidebar">
-      <div class="chart-wrapper">
+      <div class="chart-wrapper2">
         <div class="chart-title">Filtro</div>
         <div class="chart-stage">
           <div>
             <h3>Data início</h3>
-            <input style="font-size: 20px" type="date" name="date_start" id="date_start" min="2020-01-01" />
+            <input type="date" name="date_start" id="date_start" min="2020-01-01" />
             <h3>Data fim</h3>
-            <input style="font-size: 20px" type="date" name="date_end" id="date_end" min="2020-01-01" />
+            <input type="date" name="date_end" id="date_end" min="2020-01-01" />
             <h3>País</h3>
-            <select style="font-size: 20px" class="custom-select" id="cmbCountry"></select>
+            <select class="custom-select" id="cmbCountry"></select>
             <h3>Dados</h3>
-            <select style="font-size: 20px" class="custom-select" id="cmbData">
+            <select class="custom-select" id="cmbData">
               <option value="Confirmed">Casos Confirmados</option>
               <option value="Deaths" selected>Número de Óbitos</option>
               <option value="Recovered">Recuperados</option>
             </select>
             <div></div>
             <div class="btn">
-              <button style="font-size: 20px" type="submit" id="filtro">
+              <button type="submit" id="filtro">
                 Aplicar
               </button>
             </div>
@@ -59,13 +59,13 @@
     </div>
     <div class="hero">
       <div class="chart-wrapper">
-        <div class="chart-stage">
+        <div class="chart-stage2">
           <div id="divOfCanvas">
           </div>
         </div>
       </div>
     </div>
-    <div class="chart-wrapper">
+    <div class="chart-wrapper3">
       <div class="chart-title">Total de confirmados</div>
       <div class="chart-stage">
         <section class="itemkpi">
@@ -73,7 +73,7 @@
         </section>
       </div>
     </div>
-    <div class="chart-wrapper">
+    <div class="chart-wrapper3">
       <div class="chart-title">Total de mortes</div>
       <div class="chart-stage">
         <section class="itemkpi">
@@ -81,7 +81,7 @@
         </section>
       </div>
     </div>
-    <div class="chart-wrapper">
+    <div class="chart-wrapper3">
       <div class="chart-title">Total de Recuperados</div>
       <div class="chart-stage">
         <section class="itemkpi">
