@@ -81,40 +81,19 @@ async function insertInHtml() {
   }
   array.sort((a, b) => b.TotalDeaths - a.TotalDeaths);
   let firstTen = array.slice(0, 10);
-  console.log(firstTen);
+  const firstTenCountry = firstTen.map((item) => item.Country);
+  const firstTenCasesDeaths = firstTen.map((item) => item.TotalDeaths);
 
   //GRÁFICO DE BARRAS
   const chartBar = document.getElementById("barras");
   const newChartBar = new Chart(chartBar, {
     type: "bar",
     data: {
-      labels: [
-        firstTen[0].Country,
-        firstTen[1].Country,
-        firstTen[2].Country,
-        firstTen[3].Country,
-        firstTen[4].Country,
-        firstTen[5].Country,
-        firstTen[6].Country,
-        firstTen[7].Country,
-        firstTen[8].Country,
-        firstTen[9].Country,
-      ],
+      labels: firstTenCountry,
       datasets: [
         {
           label: "Total de mortes",
-          data: [
-            firstTen[0].TotalDeaths,
-            firstTen[1].TotalDeaths,
-            firstTen[2].TotalDeaths,
-            firstTen[3].TotalDeaths,
-            firstTen[4].TotalDeaths,
-            firstTen[5].TotalDeaths,
-            firstTen[6].TotalDeaths,
-            firstTen[7].TotalDeaths,
-            firstTen[8].TotalDeaths,
-            firstTen[9].TotalDeaths,
-          ],
+          data: firstTenCasesDeaths,
           backgroundColor: ["rgba(255, 99, 132, 0.8)"],
         },
       ],
