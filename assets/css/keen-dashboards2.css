@@ -380,6 +380,18 @@ small,
   font-weight: bold;
 }
 
+.navbar-inverse .navbar-brand,
+.navbar-inverse .navbar-nav > li > p {
+  color: white;
+  font-size: calc(0.6rem + 0.7vw);
+  font-weight: bold;
+  margin-left: 80vw;
+  background-color: white;
+  color: #506175;
+  padding: 3px 8px;
+  border-radius: 5px;
+}
+
 .navbar-inverse .navbar-toggle {
   background: transparent;
 }
@@ -833,8 +845,10 @@ button {
     outline: none;
     border: 1px solid grey;
     padding: 5px;
-    color: #68a797;
+    color: #506175;
     font-size: 16px;
+    font-weight: bold;
     width: 18vw;
     margin-top: 5vh;
+
 }

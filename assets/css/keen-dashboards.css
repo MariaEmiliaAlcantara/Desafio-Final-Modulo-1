@@ -7,6 +7,8 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: "Gotham Rounded SSm A", "Gotham Rounded SSm B", "Helvetica Neue",
+      Helvetica, Arial, sans-serif;
 }
 
 .wrapkpi {
@@ -379,6 +381,18 @@ small,
   color: white;
   font-size: 16px;
   font-weight: bold;
+}
+
+.navbar-inverse .navbar-brand,
+.navbar-inverse .navbar-nav > li > p {
+  color: white;
+  font-size: calc(0.6rem + 0.7vw);
+  font-weight: bold;
+  margin-left: 80vw;
+  background-color: white;
+  color: #506175;
+  padding: 3px 8px;
+  border-radius: 5px;
 }
 
 .navbar-inverse .navbar-toggle {
